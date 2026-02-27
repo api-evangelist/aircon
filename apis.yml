@@ -1,0 +1,68 @@
+name: Aircon API
+description: API for controlling and monitoring air conditioning systems
+url: https://api.aircon.example.com
+type: Index
+tags:
+- HVAC
+- Air Conditioning
+- Smart Home
+- IoT
+- Climate Control
+created: '2024-01-15'
+modified: '2024-01-15'
+apis:
+- name: Aircon Control API
+  description: RESTful API for controlling air conditioning units, managing temperature settings, modes, and schedules
+  image: https://api.aircon.example.com/images/logo.png
+  humanURL: https://aircon.example.com
+  baseURL: https://api.aircon.example.com/v1
+  version: '1.0'
+  tags:
+  - HVAC
+  - Temperature Control
+  - Smart Devices
+  properties:
+  - type: Documentation
+    url: https://docs.aircon.example.com
+  - type: OpenAPI
+    url: https://api.aircon.example.com/v1/openapi.json
+  - type: Authentication
+    url: https://docs.aircon.example.com/authentication
+  - type: Pricing
+    url: https://aircon.example.com/pricing
+  - type: Terms of Service
+    url: https://aircon.example.com/terms
+  - type: Privacy Policy
+    url: https://aircon.example.com/privacy
+  - type: Support
+    url: https://support.aircon.example.com
+  - type: Status
+    url: https://status.aircon.example.com
+  - type: SDK
+    url: https://github.com/aircon/sdk-javascript
+  - type: Changelog
+    url: https://docs.aircon.example.com/changelog
+  contact:
+  - type: Email
+    url: api@aircon.example.com
+  - type: Support
+    url: https://support.aircon.example.com
+  - type: Twitter
+    url: https://twitter.com/airconapi
+maintainers:
+- name: Aircon Development Team
+  email: developers@aircon.example.com
+  url: https://aircon.example.com/about
+common:
+- type: Getting Started
+  url: https://docs.aircon.example.com/getting-started
+- type: Authentication
+  url: https://docs.aircon.example.com/auth
+- type: Rate Limits
+  url: https://docs.aircon.example.com/rate-limits
+- type: Webhooks
+  url: https://docs.aircon.example.com/webhooks
+- type: Blog
+  url: https://blog.aircon.example.com
+- type: GitHub Organization
+  url: https://github.com/aircon
