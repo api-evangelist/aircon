@@ -1,7 +1,7 @@
 aid: aircon
 url: >-
   https://raw.githubusercontent.com/api-evangelist/aircon/refs/heads/main/apis.yml
-name: Aircon API
+name: Aircon
 tags:
   - HVAC
   - Air Conditioning
