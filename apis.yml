@@ -3,11 +3,11 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/aircon/refs/heads/main/apis.yml
 name: Aircon
 tags:
-  - HVAC
   - Air Conditioning
-  - Smart Home
-  - IoT
   - Climate Control
+  - HVAC
+  - IoT
+  - Smart Home
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 description: >-
