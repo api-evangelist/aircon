@@ -1,0 +1,9 @@
+{
+  "sensor_id": "sensor-bedroom-01",
+  "sensor_type": "temperature",
+  "value": 71.2,
+  "unit": "fahrenheit",
+  "location": "Bedroom",
+  "in_use": true,
+  "timestamp": "2026-04-19T10:30:00Z"
+}

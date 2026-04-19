@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/aircon/refs/heads/main/json-structure/aircon-thermostat-structure.json",
+  "name": "Thermostat",
+  "description": "Represents the state and configuration of a smart thermostat or HVAC control unit.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the thermostat device.",
+      "example": "thermostat-a1b2c3"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the thermostat.",
+      "example": "Living Room Thermostat"
+    },
+    "current_temperature": {
+      "type": "double",
+      "description": "Current measured temperature in degrees.",
+      "example": 72.5
+    },
+    "target_temperature": {
+      "type": "double",
+      "description": "Target temperature setpoint.",
+      "example": 70.0
+    },
+    "temperature_unit": {
+      "type": "string",
+      "enum": [
+        "celsius",
+        "fahrenheit"
+      ],
+      "description": "Unit of temperature measurement.",
+      "example": "fahrenheit"
+    },
+    "hvac_mode": {
+      "type": "string",
+      "enum": [
+        "off",
+        "heat",
+        "cool",
+        "auto",
+        "fan_only",
+        "dry"
+      ],
+      "description": "Current HVAC operating mode.",
+      "example": "cool"
+    },
+    "hvac_status": {
+      "type": "string",
+      "enum": [
+        "idle",
+        "heating",
+        "cooling",
+        "fan",
+        "off"
+      ],
+      "description": "Current HVAC operation status.",
+      "example": "cooling"
+    },
+    "fan_mode": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "on",
+        "circulate",
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Fan operation mode.",
+      "example": "auto"
+    },
+    "humidity": {
+      "type": "double",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Current relative humidity percentage.",
+      "example": 45.0
+    },
+    "target_humidity": {
+      "type": "double",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Target relative humidity percentage.",
+      "example": 50.0
+    },
+    "is_online": {
+      "type": "boolean",
+      "description": "Whether the thermostat is currently online.",
+      "example": true
+    },
+    "location": {
+      "type": "string",
+      "description": "Physical location or room of the thermostat.",
+      "example": "Living Room"
+    },
+    "model": {
+      "type": "string",
+      "description": "Thermostat model identifier.",
+      "example": "ecobee4"
+    },
+    "firmware_version": {
+      "type": "string",
+      "description": "Current firmware version of the device.",
+      "example": "4.8.7.132"
+    },
+    "last_updated": {
+      "type": "datetime",
+      "description": "Timestamp of the last status update.",
+      "example": "2026-04-19T10:30:00Z"
+    }
+  },
+  "required": [
+    "id",
+    "hvac_mode",
+    "current_temperature"
+  ]
+}

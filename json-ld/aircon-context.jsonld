@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aircon": "https://aircon.api-evangelist.com/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Thermostat": "aircon:Thermostat",
+    "HvacSchedule": "aircon:HvacSchedule",
+    "SensorReading": "aircon:SensorReading",
+    "EnergyReport": "aircon:EnergyReport",
+    "currentTemperature": {
+      "@id": "aircon:current_temperature",
+      "@type": "xsd:decimal"
+    },
+    "targetTemperature": {
+      "@id": "aircon:target_temperature",
+      "@type": "xsd:decimal"
+    },
+    "hvacMode": {
+      "@id": "aircon:hvac_mode",
+      "@type": "xsd:string"
+    },
+    "hvacStatus": {
+      "@id": "aircon:hvac_status",
+      "@type": "xsd:string"
+    },
+    "fanMode": {
+      "@id": "aircon:fan_mode",
+      "@type": "xsd:string"
+    },
+    "humidity": {
+      "@id": "aircon:humidity",
+      "@type": "xsd:decimal"
+    },
+    "targetHumidity": {
+      "@id": "aircon:target_humidity",
+      "@type": "xsd:decimal"
+    },
+    "isOnline": {
+      "@id": "aircon:is_online",
+      "@type": "xsd:boolean"
+    },
+    "heatSetpoint": {
+      "@id": "aircon:heat_setpoint",
+      "@type": "xsd:decimal"
+    },
+    "coolSetpoint": {
+      "@id": "aircon:cool_setpoint",
+      "@type": "xsd:decimal"
+    },
+    "startTime": {
+      "@id": "aircon:start_time",
+      "@type": "xsd:string"
+    },
+    "endTime": {
+      "@id": "aircon:end_time",
+      "@type": "xsd:string"
+    },
+    "sensorType": {
+      "@id": "aircon:sensor_type",
+      "@type": "xsd:string"
+    },
+    "inUse": {
+      "@id": "aircon:in_use",
+      "@type": "xsd:boolean"
+    },
+    "heatingRuntimeMinutes": {
+      "@id": "aircon:heating_runtime_minutes",
+      "@type": "xsd:integer"
+    },
+    "coolingRuntimeMinutes": {
+      "@id": "aircon:cooling_runtime_minutes",
+      "@type": "xsd:integer"
+    },
+    "fanRuntimeMinutes": {
+      "@id": "aircon:fan_runtime_minutes",
+      "@type": "xsd:integer"
+    },
+    "estimatedKwh": {
+      "@id": "aircon:estimated_kwh",
+      "@type": "xsd:decimal"
+    },
+    "averageIndoorTemp": {
+      "@id": "aircon:average_indoor_temp",
+      "@type": "xsd:decimal"
+    },
+    "averageOutdoorTemp": {
+      "@id": "aircon:average_outdoor_temp",
+      "@type": "xsd:decimal"
+    },
+    "name": "schema:name",
+    "description": "schema:description",
+    "timestamp": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "lastUpdated": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

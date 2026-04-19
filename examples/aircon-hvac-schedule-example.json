@@ -1,0 +1,17 @@
+{
+  "id": "schedule-home",
+  "name": "Home",
+  "thermostat_id": "thermostat-a1b2c3",
+  "heat_setpoint": 68.0,
+  "cool_setpoint": 76.0,
+  "days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+  ],
+  "start_time": "08:00",
+  "end_time": "17:00",
+  "is_enabled": true
+}

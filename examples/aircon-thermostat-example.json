@@ -1,0 +1,17 @@
+{
+  "id": "thermostat-a1b2c3",
+  "name": "Living Room Thermostat",
+  "current_temperature": 72.5,
+  "target_temperature": 70.0,
+  "temperature_unit": "fahrenheit",
+  "hvac_mode": "cool",
+  "hvac_status": "cooling",
+  "fan_mode": "auto",
+  "humidity": 45.0,
+  "target_humidity": 50.0,
+  "is_online": true,
+  "location": "Living Room",
+  "model": "ecobee4",
+  "firmware_version": "4.8.7.132",
+  "last_updated": "2026-04-19T10:30:00Z"
+}

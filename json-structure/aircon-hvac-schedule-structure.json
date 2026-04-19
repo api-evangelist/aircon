@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/aircon/refs/heads/main/json-structure/aircon-hvac-schedule-structure.json",
+  "name": "HvacSchedule",
+  "description": "A time-based schedule program for HVAC setpoints and modes.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the schedule.",
+      "example": "schedule-home"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the schedule.",
+      "example": "Home"
+    },
+    "thermostat_id": {
+      "type": "string",
+      "description": "ID of the thermostat this schedule applies to.",
+      "example": "thermostat-a1b2c3"
+    },
+    "heat_setpoint": {
+      "type": "double",
+      "description": "Heating setpoint temperature for this schedule period.",
+      "example": 68.0
+    },
+    "cool_setpoint": {
+      "type": "double",
+      "description": "Cooling setpoint temperature for this schedule period.",
+      "example": 76.0
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday"
+        ]
+      },
+      "description": "Days of the week this schedule applies.",
+      "example": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday"
+      ]
+    },
+    "start_time": {
+      "type": "string",
+      "description": "Start time in HH:MM 24-hour format.",
+      "example": "08:00"
+    },
+    "end_time": {
+      "type": "string",
+      "description": "End time in HH:MM 24-hour format.",
+      "example": "17:00"
+    },
+    "is_enabled": {
+      "type": "boolean",
+      "description": "Whether this schedule is active.",
+      "example": true
+    }
+  },
+  "required": [
+    "id",
+    "thermostat_id",
+    "heat_setpoint",
+    "cool_setpoint"
+  ]
+}

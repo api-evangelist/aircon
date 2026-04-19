@@ -1,0 +1,11 @@
+{
+  "thermostat_id": "thermostat-a1b2c3",
+  "period_start": "2026-04-01T00:00:00Z",
+  "period_end": "2026-04-30T23:59:59Z",
+  "heating_runtime_minutes": 120,
+  "cooling_runtime_minutes": 480,
+  "fan_runtime_minutes": 60,
+  "estimated_kwh": 45.2,
+  "average_indoor_temp": 71.5,
+  "average_outdoor_temp": 82.3
+}

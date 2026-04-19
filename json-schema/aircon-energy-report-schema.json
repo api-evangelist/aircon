@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/aircon/refs/heads/main/json-schema/aircon-energy-report-schema.json",
+  "title": "EnergyReport",
+  "description": "Energy consumption and runtime report for an HVAC system over a time period.",
+  "type": "object",
+  "properties": {
+    "thermostat_id": {
+      "type": "string",
+      "description": "ID of the thermostat this report covers.",
+      "example": "thermostat-a1b2c3"
+    },
+    "period_start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Start of the reporting period.",
+      "example": "2026-04-01T00:00:00Z"
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date-time",
+      "description": "End of the reporting period.",
+      "example": "2026-04-30T23:59:59Z"
+    },
+    "heating_runtime_minutes": {
+      "type": "integer",
+      "description": "Total minutes the heating system ran.",
+      "example": 120
+    },
+    "cooling_runtime_minutes": {
+      "type": "integer",
+      "description": "Total minutes the cooling system ran.",
+      "example": 480
+    },
+    "fan_runtime_minutes": {
+      "type": "integer",
+      "description": "Total minutes the fan ran independently.",
+      "example": 60
+    },
+    "estimated_kwh": {
+      "type": "number",
+      "description": "Estimated energy consumption in kilowatt-hours.",
+      "example": 45.2
+    },
+    "average_indoor_temp": {
+      "type": "number",
+      "description": "Average indoor temperature during the period.",
+      "example": 71.5
+    },
+    "average_outdoor_temp": {
+      "type": "number",
+      "description": "Average outdoor temperature during the period.",
+      "example": 82.3
+    }
+  },
+  "required": ["thermostat_id", "period_start", "period_end"]
+}

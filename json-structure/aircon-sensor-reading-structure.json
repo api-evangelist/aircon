@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/aircon/refs/heads/main/json-structure/aircon-sensor-reading-structure.json",
+  "name": "SensorReading",
+  "description": "A sensor measurement from a climate or environmental sensor associated with an HVAC system.",
+  "type": "object",
+  "properties": {
+    "sensor_id": {
+      "type": "string",
+      "description": "Unique identifier for the sensor.",
+      "example": "sensor-bedroom-01"
+    },
+    "sensor_type": {
+      "type": "string",
+      "enum": [
+        "temperature",
+        "humidity",
+        "occupancy",
+        "co2",
+        "air_quality",
+        "pressure"
+      ],
+      "description": "Type of sensor measurement.",
+      "example": "temperature"
+    },
+    "value": {
+      "type": "double",
+      "description": "Measured sensor value.",
+      "example": 71.2
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of the measurement.",
+      "example": "fahrenheit"
+    },
+    "location": {
+      "type": "string",
+      "description": "Physical location of the sensor.",
+      "example": "Bedroom"
+    },
+    "in_use": {
+      "type": "boolean",
+      "description": "Whether the sensor is actively used for thermostat control.",
+      "example": true
+    },
+    "timestamp": {
+      "type": "datetime",
+      "description": "Timestamp of the reading.",
+      "example": "2026-04-19T10:30:00Z"
+    }
+  },
+  "required": [
+    "sensor_id",
+    "sensor_type",
+    "value",
+    "timestamp"
+  ]
+}

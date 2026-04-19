@@ -1,0 +1,170 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Aircon"
+  description: "Domain vocabulary for air conditioning, HVAC, and climate control APIs. Covers thermostat control, sensor data, scheduling, and energy monitoring across providers."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: Google Nest Device Access API
+      namespace: nest
+      version: "1.0.0"
+      baseUrl: https://smartdevicemanagement.googleapis.com/v1
+      status: active
+    - name: Ecobee API
+      namespace: ecobee
+      version: "1.0.0"
+      baseUrl: https://api.ecobee.com
+      status: active
+    - name: Resideo (Honeywell Home) API
+      namespace: resideo
+      version: "1.0.0"
+      baseUrl: https://api.honeywell.com
+      status: active
+    - name: Sensibo API
+      namespace: sensibo
+      version: "2.0.0"
+      baseUrl: https://home.sensibo.com/api/v2
+      status: active
+    - name: OpenWeatherMap API
+      namespace: openweathermap
+      version: "2.5"
+      baseUrl: https://api.openweathermap.org/data/2.5
+      status: active
+    - name: Home Assistant REST API
+      namespace: homeassistant
+      version: "1.0.0"
+      baseUrl: http://homeassistant.local:8123/api
+      status: active
+
+  resources:
+    - name: thermostats
+      description: "Smart thermostat devices with temperature sensing and HVAC control."
+      actions: [list, get, update]
+    - name: schedules
+      description: "Time-based HVAC programs and setpoint schedules."
+      actions: [list, get, create, update, delete]
+    - name: sensors
+      description: "Remote temperature, humidity, and occupancy sensors."
+      actions: [list, get]
+    - name: energy-reports
+      description: "HVAC runtime and energy consumption reports."
+      actions: [get, list]
+    - name: weather
+      description: "Outdoor weather data used for climate control decisions."
+      actions: [get]
+
+  actions:
+    - name: list
+      methods: [GET]
+      pattern: read
+    - name: get
+      methods: [GET]
+      pattern: read
+    - name: create
+      methods: [POST]
+      pattern: write
+    - name: update
+      methods: [POST, PUT, PATCH]
+      pattern: write
+    - name: delete
+      methods: [DELETE]
+      pattern: destructive
+
+  schemas:
+    core:
+      - name: Thermostat
+        description: "Smart thermostat state and configuration."
+      - name: HvacSchedule
+        description: "Time-based HVAC temperature program."
+      - name: SensorReading
+        description: "Environmental sensor measurement."
+      - name: EnergyReport
+        description: "HVAC runtime and energy consumption report."
+
+  enums:
+    hvac_mode:
+      - "off"
+      - heat
+      - cool
+      - auto
+      - fan_only
+      - dry
+    hvac_status:
+      - idle
+      - heating
+      - cooling
+      - fan
+      - "off"
+    fan_mode:
+      - auto
+      - "on"
+      - circulate
+      - low
+      - medium
+      - high
+    sensor_type:
+      - temperature
+      - humidity
+      - occupancy
+      - co2
+      - air_quality
+      - pressure
+    temperature_unit:
+      - celsius
+      - fahrenheit
+
+  authentication:
+    schemes:
+      - type: oauth2
+        description: "OAuth2 authorization for Nest, Ecobee, and Resideo APIs."
+        apis: [nest, ecobee, resideo]
+      - type: apikey
+        description: "API key for OpenWeatherMap and Sensibo."
+        apis: [openweathermap, sensibo]
+      - type: bearer
+        description: "Long-lived bearer token for Home Assistant."
+        apis: [homeassistant]
+
+capability:
+  workflows: []
+  personas:
+    - id: homeowner
+      name: Homeowner
+      description: "Manages residential HVAC settings for comfort and energy savings."
+    - id: facilities-manager
+      name: Facilities Manager
+      description: "Oversees commercial HVAC across multiple zones and buildings."
+    - id: iot-developer
+      name: IoT Developer
+      description: "Integrates HVAC APIs into smart home and automation platforms."
+
+  domains:
+    - name: Comfort Control
+      description: "Maintaining comfortable indoor temperature and humidity."
+      resources: [thermostats, sensors]
+    - name: Energy Management
+      description: "Optimizing HVAC energy usage and tracking consumption."
+      resources: [energy-reports, schedules]
+    - name: Automation
+      description: "Automated scheduling and condition-based HVAC control."
+      resources: [schedules, weather]
+
+  namespaces: []
+  binds: []
+
+crossReference:
+  - resource: thermostats
+    operations: [get thermostat, set temperature, set mode, set fan mode]
+    personas: [Homeowner, Facilities Manager, IoT Developer]
+  - resource: schedules
+    operations: [create schedule, update schedule, delete schedule]
+    personas: [Homeowner, Facilities Manager]
+  - resource: sensors
+    operations: [list sensors, get sensor data]
+    personas: [Homeowner, IoT Developer]
+  - resource: energy-reports
+    operations: [get energy report, get runtime data]
+    personas: [Homeowner, Facilities Manager]
