@@ -124,6 +124,10 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 common:
+- type: VulnerabilityDisclosure
+  url: security/aircon-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/aircon-domain-security.yml
 - type: Features
   data:
   - name: Thermostat Control
