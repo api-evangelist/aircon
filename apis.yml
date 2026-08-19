@@ -30,7 +30,7 @@ description: >-
   smart thermostat APIs, building automation protocols, IoT climate APIs, and environmental data APIs used in residential, commercial, and industrial HVAC applications.
 created: '2024-01-15'
 modified: '2026-04-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: aircon:nest-device-access
   name: Google Nest Device Access API
