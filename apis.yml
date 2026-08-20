@@ -121,6 +121,12 @@ apis:
   - Smart Home
   - HVAC
   - IoT
+  - Open-Source
+  - Automation
+  tags_raw:
+  - Smart Home
+  - HVAC
+  - IoT
   - Open Source
   - Automation
   humanURL: https://developers.home-assistant.io/docs/api/rest/
